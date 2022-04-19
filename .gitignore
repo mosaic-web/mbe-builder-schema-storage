@@ -1,0 +1,7 @@
+# Cache and environment
+.venv
+.mypy_cache
+__pycache__
+
+# Configuration
+.env

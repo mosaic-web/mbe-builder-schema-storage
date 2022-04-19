@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "mbe-builder-schema-storage"
+version = "0.1.0"
+description = "Mosaic storage for builder schema"
+authors = ["Oleh Kutsenko <inthedark1225@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = {extras = ["pydantic"], version = "^0.75.2"}
+uvicorn = {extras = ["standard"], version = "^0.17.6"}
+SQLAlchemy = {extras = ["asyncio"], version = "^1.4.35"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"
+pre-commit = "^2.18.1"
+pre-commit-hooks = "^4.1.0"
+black = "^22.3.0"
+flake8 = "^4.0.1"
+mypy = "^0.942"
+reorder-python-imports = "^3.0.1"
+
+[tool.poetry.scripts]
+dev = "mbe_builder_schema_storage.dev:start"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
